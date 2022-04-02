@@ -596,7 +596,7 @@ export default {
         .then(function(maxMintNum){
           console.log(maxMintNum);
           if( maxMintNum <=1 ) maxMintNum = 1;
-          if( maxMintNum > 10 ) maxMintNum = 10;
+          // if( maxMintNum > 10 ) maxMintNum = 10;
           // FIXME 
           // show mint dialog accrossing maxMintNum
           let mintOptions = [];
