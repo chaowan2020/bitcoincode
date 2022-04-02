@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>close-red-icon</title>
+    <g id="page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon board" transform="translate(-346.000000, -465.000000)" fill-rule="nonzero">
+            <g id="close-red-icon" transform="translate(346.000000, 465.000000)">
+                <rect id="rect" fill="#000000" opacity="0" x="0" y="0.5" width="21" height="21"></rect>
+                <path d="M10.5,0 C4.70625,0 0,4.70625 0,10.5 C0,16.29375 4.70625,21 10.5,21 C16.29375,21 21,16.29375 21,10.5 C21,4.70625 16.29375,0 10.5,0 Z M15.9816054,14.951505 L14.9331104,16 L10.5,11.548495 L6.04849498,15.9816054 L5,14.9331104 L9.46989967,10.5 L5.01839465,6.04849498 L6.06688963,5 L10.5,9.46989967 L14.951505,5.01839465 L16,6.06688963 L11.548495,10.5 L15.9816054,14.951505 L15.9816054,14.951505 Z" id="stroke" fill="#9F4B4B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

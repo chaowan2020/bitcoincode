@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="274px" height="70px" viewBox="0 0 274 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>group</title>
+    <defs>
+        <linearGradient x1="15.768022%" y1="47.2301926%" x2="87.3191297%" y2="52.4882155%" id="linearGradient-1">
+            <stop stop-color="#8AD8E7" offset="0%"></stop>
+            <stop stop-color="#DB80B8" offset="33.0821839%"></stop>
+            <stop stop-color="#F8EC71" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web" transform="translate(-120.000000, -2636.000000)">
+            <g id="group" transform="translate(120.000000, 2636.000000)">
+                <rect id="rect" fill="url(#linearGradient-1)" x="0" y="0" width="274" height="70" rx="35"></rect>
+                <text id="NSO-Mint" font-family="Krungthep" font-size="30" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="66" y="46">NSO Mint</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

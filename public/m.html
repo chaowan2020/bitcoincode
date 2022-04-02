@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="favicon.ico">
+    <title>Bitcoin Code NFT</title>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript">
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if(isAndroid || isiOS){
+          
+        }else{
+            window.location.href="https://bitcoincodenft.io";
+        }
+    </script>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+        html,body{
+            background-color: #0b113d;
+        }
+        img{ 
+            width:100%;  
+            vertical-align:bottom;
+            display:block;
+        }
+        .wrapper{
+            position: relative;
+        }
+        .top-btns{
+            margin-top: 0.86rem;
+            margin-left: 2.16rem;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .top-btns .discord{
+            float: left;
+            width: 0.71rem;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+        }
+        .top-btns .twitter,.top-btns .opensea{
+            float: left;
+            width: 0.71rem;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            margin-left: 0.53rem;
+        }
+        .bottom-btns{
+            margin-top: 4.38rem;
+            margin-left: 1.91rem;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .bottom-btns .discord{
+            float: left;
+            width: 0.68rem;
+            height: 0.68rem;
+        }
+        .bottom-btns .twitter{
+            float: left;
+            width: 0.68rem;
+            height: 0.68rem;
+            margin-left: 0.85rem;
+        }
+        .bottom-btns .opensea{
+            float: left;
+            width: 0.68rem;
+            height: 0.68rem;
+            margin-left: 0.77rem;
+        }
+        .count-down{
+            height: 2.2rem;
+            overflow: hidden;
+            line-height: 2.2rem;
+        }
+        .count-down .dayFrom{
+            font-size: 1.04rem;
+            float: left;
+            margin-left: 0.74rem;
+            font-family: BMDoHyeon-OTF, BMDoHyeon;
+            font-weight: 700;
+            color: #01486E;
+            background: linear-gradient(121deg, #FF009B 0%, #B3FF00 29%, #00B9FF 62%, #FF8500 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dayFont{
+            float: left;
+            font-size: 0.18rem;
+            margin-left: 0.27rem;
+            margin-right: 0.4rem;
+            line-height: 1rem;
+            margin-top: 0.8rem;
+            color:#fff;
+        }
+        .timeFrom{
+            font-size: 0.8rem;
+            float: left;
+            margin-left: 0.36rem;
+            font-family: BMDoHyeon-OTF, BMDoHyeon;
+            font-weight: 700;
+            color: #01486E;
+            background: linear-gradient(121deg, #FF009B 0%, #B3FF00 29%, #00B9FF 62%, #FF8500 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-btns">
+            <div class="discord" onclick="toDiscord()"></div>
+            <div class="twitter" onclick="toTwitter()"></div>
+            <div class="opensea" onclick="toOpenSea()"></div>
+        </div>
+        <img src="http://cdn.bitcoincodenft.io/imgs/ui-1.png" alt="DCrush Labs" width="100%">
+    </div>    
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-2.png" alt="DCrush Labs" width="100%">
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-3.png" alt="DCrush Labs" width="100%">
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-4.png" alt="DCrush Labs" width="100%">
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-5.png" alt="DCrush Labs" width="100%">
+    <div class="count-down">
+        <div class="dayFrom" id="dayFrom">00</div>
+        <div class="dayFont">Days</div>
+        <div class="timeFrom" id="timeFrom">00:00:00</div>
+    </div>
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-6.png" alt="DCrush Labs" width="100%">
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-7.png" alt="DCrush Labs" width="100%">
+    <img src="http://cdn.bitcoincodenft.io/imgs/ui-8.png" alt="DCrush Labs" width="100%">
+    <div class="wrapper">
+        <div class="bottom-btns">
+            <div class="discord" onclick="toDiscord()"></div>
+            <div class="twitter" onclick="toTwitter()"></div>
+            <div class="opensea" onclick="toOpenSea()"></div>
+        </div>
+        <img src="http://cdn.bitcoincodenft.io/imgs/ui-9.png" alt="DCrush Labs" width="100%">
+    </div>
+    
+</body>
+</html>

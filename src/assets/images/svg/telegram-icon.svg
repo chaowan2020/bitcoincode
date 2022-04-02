@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>telegram-icon</title>
+    <g id="page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="board" transform="translate(-73.000000, -375.000000)" fill="#FFFFFF">
+            <g id="telegram-icon" transform="translate(73.000000, 375.000000)">
+                <rect id="rect" opacity="0" x="0" y="0" width="28" height="28"></rect>
+                <path d="M10.9098102,23 C10.2036224,23 10.3232985,22.7362455 10.0799901,22.0763726 L8,15.3413866 L24,6" id="path" fill-rule="nonzero"></path>
+                <path d="M11,23 C11.5457242,23 11.7859614,22.7759602 12.092437,22.5083571 L15,19.9683499 L11.3707365,18" id="path" fill-rule="nonzero"></path>
+                <path d="M11.009761,17.5390929 L19.5322952,23.7409003 C20.5053404,24.269678 21.208042,23.9967909 21.4496257,22.8514206 L24.9199939,6.74919445 C25.2766174,5.34510073 24.3793067,4.71056746 23.4494014,5.12509141 L3.07392989,12.8650754 C1.68386525,13.4146266 1.69057591,14.1794658 2.82084226,14.5203386 L8.05036128,16.1255567 L20.1525516,8.60652622 C20.7229574,8.26659768 21.248306,8.44883715 20.8178653,8.82559129" id="path" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
