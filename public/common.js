@@ -47,7 +47,7 @@
     window.location.href = "https://twitter.com/BTCcodeNFT"
   }
   function toDiscord(){
-    window.location.href = "https://discord.gg/WnbsRmbH"
+    window.location.href = "https://discord.gg/xws6hmUR6k"
   }
   function toOpenSea(){
     window.location.href = "https://opensea.io/collection/bitcoin-code-nft"

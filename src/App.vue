@@ -23,7 +23,7 @@
                     <section class="wallet-address">
                       {{wallet.substring(0,12)+"****"+wallet.substr(-12)}}<img src="~@/assets/images/svg/copy-icon.svg" @click="copy" class="wallet-copy" alt="DCrush Labs" width="18" style="margin-left:20px">
                   </section>
-                </section>         
+                </section>
                 <section class="wallet-btns clearfix">
                     <section class="wallet-btn" @click="toEthExplorer">View on Explorer</section>
                     <!-- <section class="wallet-btn" @click="disconnect">Disconnect</section> -->
@@ -34,21 +34,21 @@
             <li @click="toTwitter"><img src="~@/assets/images/svg/Twitter-little.svg" alt="DCrush Labs"></li>
             <li style="margin-left:154px" @click="toDiscord"><img src="~@/assets/images/svg/Discord-little.svg" alt="DCrush Labs"></li>
             <li @click="fastLink('faq')" :class="activeId=='faq'?'marl-76 active':'marl-76'">
-              <div class="link-name"><i></i>FAQs</div>              
+              <div class="link-name"><i></i>FAQs</div>
             </li>
-            <li @click="fastLink('snowball')" :class="activeId=='snowball'?'marl-76 active':'marl-76'">
-              <div class="link-name"><i></i>Snowball</div>     
-            </li>
+<!--            <li @click="fastLink('snowball')" :class="activeId=='snowball'?'marl-76 active':'marl-76'">-->
+<!--              <div class="link-name"><i></i>Snowball</div>-->
+<!--            </li>-->
             <li @click="fastLink('mint')" :class="activeId=='mint'?'marl-76 active':'marl-76'">
-              <div class="link-name"><i></i>Mint</div> 
+              <div class="link-name"><i></i>Mint</div>
             </li>
             <li @click="fastLink('nft')" :class="activeId=='nft'?'active':''">
-              <div class="link-name"><i></i>NFTs</div> 
+              <div class="link-name"><i></i>NFTs</div>
             </li>
         </ul>
       </section>
     </header>
-    
+
     <!-- content -->
     <section class="content-container">
         <!-- links -->
@@ -68,7 +68,7 @@
                     <section class="wallet-address">
                       {{wallet.substring(0,12)+"****"+wallet.substr(-12)}}<img src="~@/assets/images/svg/copy-icon.svg" @click="copy" class="wallet-copy" alt="DCrush Labs" width="18" style="margin-left:20px">
                   </section>
-                </section>                
+                </section>
                 <section class="wallet-btns clearfix">
                     <section class="wallet-btn" @click="toEthExplorer">View on Explorer</section>
                     <!-- <section class="wallet-btn" @click="disconnect">Disconnect</section> -->
@@ -106,19 +106,18 @@
                   <p><span><</span><span class="pink">DCrush Labs </span><span> has generated 6,483 unique NFTs from the codebase </span></p>
                   <p><span>&nbsp;currently used to run Bitcoin.</span></p>
                   <p></p>
-                  <p><span><</span><span class="pink">Now</span><span>,</span><span class="golden">everyone can get them through this NFT community</span></p>
-                  <p><span class="golden">&nbsp;experiment--Free Mint.</span></p>
+                  <p><span><</span><span class="pink">Now</span><span>,</span><span class="golden"> everyone can FREE MINT them through this experiment.</span></p>
               </section>
            </section>
         </section>
         <!-- mint -->
-        <section class="wrapper" id="mint"> 
-            <section class="mint-part">               
-                <section class="mint-container">   
-                  <section class="mint-charge-title">Mint a BitcoinCodeNFT</section>    
+        <section class="wrapper" id="mint">
+            <section class="mint-part">
+                <section class="mint-container">
+                  <section class="mint-charge-title">Mint a BitcoinCodeNFT</section>
                   <section class="mint-charge-subtitle">
-                    6483 unique items stored on the Ethereum blockchain
-                  </section>     
+                    6483 unique items
+                  </section>
                   <div class="mint-select-box" @mouseleave="removeSelect">
                       <div class="mint-select" @click="toSelect">
                         {{mintValue}}
@@ -130,10 +129,10 @@
                           <img src="~@/assets/images/svg/get.svg" v-if="mintValue==item" class="isChecked" width="16" alt="DCrush Labs">
                         </div>
                       </div>
-                  </div> 
-                  <img src="~@/assets/images/svg/Coming.svg" v-if="mintCode=='comingsoon'" class="mint-btn" alt="DCrush Labs">  
-                  <img src="~@/assets/images/svg/soldOut.svg" v-if="mintCode=='soldout'" class="mint-btn" alt="DCrush Labs">      
-                  <img src="~@/assets/images/svg/Mint.svg" v-if="mintCode=='mint'" class="mint-btn curp" @click="mint" alt="DCrush Labs">     
+                  </div>
+                  <img src="~@/assets/images/svg/Coming.svg" v-if="mintCode=='comingsoon'" class="mint-btn" alt="DCrush Labs">
+                  <img src="~@/assets/images/svg/soldOut.svg" v-if="mintCode=='soldout'" class="mint-btn" alt="DCrush Labs">
+                  <img src="~@/assets/images/svg/Mint.svg" v-if="mintCode=='mint'" class="mint-btn" alt="DCrush Labs">
                   <!-- <div class="mint-charge">
                     <div :class="isMinting?'mint-charge-btn disabled':'mint-charge-btn'" v-show="canmint" @click="mint">Mint</div>
                     <div class="mint-charge-btn disabled" v-show="!canmint" id="cantmint">Mint</div>
@@ -142,9 +141,10 @@
                 </section>
                 <section class="mint-opensea-tip" >
                   <section class="mint-table">
-                      <p>The FreeMint experiment will be issued in NFT Snowball Offering (NSO) mode.</p>
+                      <p>The Free Mint experiment will be issued in Deggresive Minting mode.</p>
                       <p>The 359 NFTs in this collection that contain the developer's signatures will be given to the developers for free.</p>
-                  </section>                  
+                      <p>We are excited to announce that several developers have now claimed these NFTs!</p>
+                  </section>
                 </section>
             </section>
         </section>
@@ -167,153 +167,203 @@
         <!-- Snowball -->
         <section class="wrapper" id="snowball">
             <section class="snowball-part">
-              <section class="snowball-title">NFT Snowball Offering</section>
+              <section class="snowball-title">Degressive Free-Mint Mode</section>
               <section class="snowball-table">
-                  <p>NFT Snowball Offering (NSO) is a revolutionary NFT issue experiment driven completely by the community.  </p>
-                  <p>After the issuance cycle begins, the minting price will decrease as the community member grows. </p>
-                  <p>And eventually reaches Free Mint when the community is at a large enough size.</p>
+                  <p>As our way of paying homage to the digital gold that is Bitcoin, </p>
+                  <p>Bitcoin Code NFT will employ a Degressive Free-Mint Mode to be carried out in three stages.  </p>
+                  <p>Each stage will offer 50% less free mint spots than the stage before.</p>
+                  <br />
+                  <br />
+                  <p>This modality encourages early contributors. </p>
+                  <p>With diminishing supply of free mints,</p>
+                  <p> it will become harder to obatin Bitcoin Code NFTs as more people come into the community.</p>
+                  <p>This also means that early contributors have a huge first-mover advantage.</p>
                   <!-- <p>And this process will continue until the realization of Free Mint!</p> -->
               </section>
-              
-              <section class="snowball-nfo-container">
-                <section class="snowball-nfo-content">
-                    <section class="snowball-nfo-title">BitcoinCodeNFT NSO</section>
-                    <section class="snowball-nfo-table">
-                        <p>Initial NFT minting price: 1ETH</p>
-                        <p>Initial community size: 1000 members</p>                        
-                    </section>
-                    <section class="snowball-nfo-table">
-                        <p>As the community doubles its size, the minting price will correspond by dropping 50%. </p>
-                        <p>Eventually, as the community size reaches 128k, free mint will be achieved.</p>
-                    </section>
+
+<!--              <section class="snowball-nfo-container">-->
+<!--                <section class="snowball-nfo-content">-->
+<!--                    <section class="snowball-nfo-title">BitcoinCodeNFT NSO</section>-->
+<!--                    <section class="snowball-nfo-table">-->
+<!--                        <p>Initial NFT minting price: 1ETH</p>-->
+<!--                        <p>Initial community size: 1000 members</p>-->
+<!--                    </section>-->
+<!--                    <section class="snowball-nfo-table">-->
+<!--                        <p>As the community doubles its size, the minting price will correspond by dropping 50%. </p>-->
+<!--                        <p>Eventually, as the community size reaches 128k, free mint will be achieved.</p>-->
+<!--                    </section>-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-count-down">-->
+<!--                  <section class="snowball-count-down-title">NSO Circle Countdown: </section>-->
+<!--                  <section class="snowball-count-down-table">-->
+<!--                    <span class="dayFrom">{{dayFrom}}</span>-->
+<!--                    <span class="daysFont">Days</span>-->
+<!--                    <span class="timeFrom">{{timeFrom}}</span>-->
+<!--                  </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step dark-blue disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">BitcoinCodeNFT Start-up</section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  Begin outreach to bitcoin developers. Invite global coders and NFT enthusiasts to join the experiment.-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step purple disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">Number of members hits 1000<span class="snowball-step-italic">1ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  The NFT Snowball Offering (NSO) community experiment begins.-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step dark-green disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">2000<span class="snowball-step-members">members</span><span class="snowball-step-through">1ETH</span><span class="snowball-step-italic">0.5ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  <p>Start #FindingDevelopers and gifting them Bitcoin Code NFTs.</p>-->
+<!--                  <p>The awesome community experiment goes on!</p>-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step brown disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">4000<span class="snowball-step-members">members</span><span class="snowball-step-through">0.5ETH</span><span class="snowball-step-italic">0.25ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  <div class="snowball-step-table">-->
+<!--                      <i></i>-->
+<!--                      <p>#Memecoin Gift Pack Giveaway#</p>-->
+<!--                      <p>Our large gift pack contains several varieties of meme coin. This is our way of paying tribute </p>-->
+<!--                      <p>to the meme coin community!</p>-->
+<!--                      <p>The awesome community experiment goes on!</p>-->
+<!--                  </div>-->
+<!--                  <div class="snowball-step-table">-->
+<!--                    <i></i>-->
+<!--                    <p>More whitelist spots open.</p>-->
+<!--                  </div>-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step light-blue disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">8000<span class="snowball-step-members">members</span><span class="snowball-step-through">0.25ETH</span><span class="snowball-step-italic">0.125ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  <div class="snowball-step-table">-->
+<!--                      <i></i>-->
+<!--                      <p>Develop mutual collaborations with influencers or communities.</p>-->
+<!--                  </div>-->
+<!--                  <div class="snowball-step-table">-->
+<!--                    <i></i>-->
+<!--                    <p>More whitelist spots open.</p>-->
+<!--                  </div>-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step light-red disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">16K<span class="snowball-step-members">members</span><span class="snowball-step-through">0.125ETH</span><span class="snowball-step-italic">0.0625ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  <div class="snowball-step-table">-->
+<!--                      <i></i>-->
+<!--                      <p>#My story with BTC#</p>-->
+<!--                      <p>Host a large-scale code themed party, inviting Bitcoin developers and holders to share their</p>-->
+<!--                      <p>stories/histories with Bitcoin.</p>-->
+<!--                  </div>-->
+<!--                  <div class="snowball-step-table">-->
+<!--                    <i></i>-->
+<!--                    <p>More whitelist spots open.</p>-->
+<!--                  </div>-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step light-brown disabled">-->
+<!--                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">32K<span class="snowball-step-members">members</span><span class="snowball-step-through">0.0625ETH</span><span class="snowball-step-italic">0.0312ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  <div class="snowball-step-table">-->
+<!--                      <i></i>-->
+<!--                      <p>#Magical Social Network#</p>-->
+<!--                      <p>Invite your friends to join this experiment.</p>-->
+<!--                      <p>Let NFT not only be exclusive to the rich, you can also get them for free and enjoy the fun.</p>-->
+<!--                  </div>-->
+<!--                  <div class="snowball-step-table">-->
+<!--                    <i></i>-->
+<!--                    <p>More whitelist spots open.</p>-->
+<!--                  </div>-->
+<!--                </section>-->
+<!--              </section>-->
+<!--              <section class="snowball-step light-green">-->
+<!--                <img src="~@/assets/images/svg/snowball.svg" class="snowball-step-snowball"  alt="DCrush Labs">-->
+<!--                <section class="snowball-step-title">64K<span class="snowball-step-members">members</span><span class="snowball-step-through">0.0312ETH</span><span class="snowball-step-italic">0.0156ETH/item</span></section>-->
+<!--                <section class="snowball-step-content">-->
+<!--                  <div class="snowball-step-table">-->
+<!--                      <i></i>-->
+<!--                      <p>Outreach to BTC whale holders to further increase our exposure.</p>-->
+<!--                      <p>Our community then will be strong and large enough to have a solid online presence, and we will</p>-->
+<!--                      <p>gain more attention by interacting and inviting them to our community. Hopefully, the idea of ​​code</p>-->
+<!--                      <p>freedom as well as NFT freedom will become more dominant because of our efforts!</p>-->
+<!--                  </div>-->
+<!--                  <div class="snowball-step-table">-->
+<!--                    <i></i>-->
+<!--                    <p>More whitelist spots open.</p>-->
+<!--                  </div>-->
+<!--                </section>-->
+<!--              </section>-->
+              <section class="snowball-step blue-medium" style="margin-bottom:64px;">
+                <section class="snowball-step-title">Round 1
+<!--                  <span class="snowball-step-members">members</span><span class="snowball-step-free">FREE MINT！</span>-->
                 </section>
-              </section>
-              <section class="snowball-count-down">
-                  <section class="snowball-count-down-title">NSO Circle Countdown: </section>
-                  <section class="snowball-count-down-table">
-                    <span class="dayFrom">{{dayFrom}}</span>
-                    <span class="daysFont">Days</span>
-                    <span class="timeFrom">{{timeFrom}}</span>
-                  </section>
-              </section>
-              <section class="snowball-step dark-blue disabled">
-                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">
-                <section class="snowball-step-title">BitcoinCodeNFT Start-up</section>
-                <section class="snowball-step-content">
-                  Begin outreach to bitcoin developers. Invite global coders and NFT enthusiasts to join the experiment.
-                </section>
-              </section>
-              <section class="snowball-step purple disabled">
-                <img src="~@/assets/images/svg/tip.svg" class="snowball-step-flag"  alt="DCrush Labs">
-                <section class="snowball-step-title">Number of memebers hits 1000<span class="snowball-step-italic">1ETH/item</span></section>
-                <section class="snowball-step-content">
-                  The NFT Snowball Offering (NSO) community experiment begins.
-                </section>
-              </section>
-              <section class="snowball-step dark-green">
-                <img src="~@/assets/images/svg/snowball.svg" class="snowball-step-snowball"  alt="DCrush Labs">
-                <section class="snowball-step-title">2000<span class="snowball-step-members">members</span><span class="snowball-step-through">1ETH</span><span class="snowball-step-italic">0.5ETH/item</span></section>
-                <section class="snowball-step-content">
-                  <p>Start #FindingDevelopers and gifting them Bitcoin Code NFTs.</p>
-                  <p>The awesome community experiment goes on!</p>
-                </section>
-              </section>
-              <section class="snowball-step brown">
-                <section class="snowball-step-title">4000<span class="snowball-step-members">members</span><span class="snowball-step-through">0.5ETH</span><span class="snowball-step-italic">0.25ETH/item</span></section>
                 <section class="snowball-step-content">
                   <div class="snowball-step-table">
                       <i></i>
-                      <p>#Memecoin Gift Pack Giveaway#</p>
-                      <p>Our large gift pack contains several varieties of meme coin. This is our way of paying tribute </p>
-                      <p>to the meme coin community!</p>
-                      <p>The awesome community experiment goes on!</p>
+                      <p>Mint time: Around June.15th, 2022</p>
+
                   </div>
+                  <div class="total-supply"><i></i><span>Total Supply: 3600 </span></div>
                   <div class="snowball-step-table">
                     <i></i>
-                    <p>More whitelist spots open.</p>
+                    <p>Eligibility: Whitelisted Users</p>
                   </div>
                 </section>
               </section>
-              <section class="snowball-step light-blue">
-                <section class="snowball-step-title">8000<span class="snowball-step-members">members</span><span class="snowball-step-through">0.25ETH</span><span class="snowball-step-italic">0.125ETH/item</span></section>
+
+              <section class="snowball-step purple-medium" style="margin-bottom:64px;">
+                <section class="snowball-step-title">Round 2
+                  <!--                  <span class="snowball-step-members">members</span><span class="snowball-step-free">FREE MINT！</span>-->
+                </section>
                 <section class="snowball-step-content">
                   <div class="snowball-step-table">
-                      <i></i>
-                      <p>Develop mutual collaborations with influencers or communities.</p>
+                    <i></i>
+                    <p>Mint time: Around June.20th, 2022</p>
+
                   </div>
+                  <div class="total-supply"><i></i><span>Total Supply: 1800 </span></div>
                   <div class="snowball-step-table">
                     <i></i>
-                    <p>More whitelist spots open.</p>
+                    <p>Eligibility: Whitelisted Users</p>
                   </div>
                 </section>
               </section>
-              <section class="snowball-step light-red">
-                <section class="snowball-step-title">16K<span class="snowball-step-members">members</span><span class="snowball-step-through">0.125ETH</span><span class="snowball-step-italic">0.0625ETH/item</span></section>
+              <section class="snowball-step green-medium" style="margin-bottom:64px;">
+                <section class="snowball-step-title">Round 3
+                  <!--                  <span class="snowball-step-members">members</span><span class="snowball-step-free">FREE MINT！</span>-->
+                </section>
                 <section class="snowball-step-content">
                   <div class="snowball-step-table">
-                      <i></i>
-                      <p>#My story with BTC#</p>
-                      <p>Host a large-scale code themed party, inviting Bitcoin developers and holders to share their</p>
-                      <p>stories/histories with Bitcoin.</p>
+                    <i></i>
+                    <p>Mint time: Around June.25th, 2022</p>
+
                   </div>
+                  <div class="total-supply"><i></i><span>Total Supply: 678 </span></div>
                   <div class="snowball-step-table">
                     <i></i>
-                    <p>More whitelist spots open.</p>
+                    <p>Eligibility: Whitelisted Users</p>
                   </div>
                 </section>
               </section>
-              <section class="snowball-step light-brown">
-                <section class="snowball-step-title">32K<span class="snowball-step-members">members</span><span class="snowball-step-through">0.0625ETH</span><span class="snowball-step-italic">0.0312ETH/item</span></section>
-                <section class="snowball-step-content">
-                  <div class="snowball-step-table">
-                      <i></i>
-                      <p>#Magical Social Network#</p>
-                      <p>Invite your friends to join this experiment.</p>
-                      <p>Let NFT not only be exclusive to the rich, you can also get them for free and enjoy the fun.</p>
-                  </div>
-                  <div class="snowball-step-table">
-                    <i></i>
-                    <p>More whitelist spots open.</p>
-                  </div>
-                </section>
-              </section>
-              <section class="snowball-step light-green">
-                <section class="snowball-step-title">64K<span class="snowball-step-members">members</span><span class="snowball-step-through">0.0312ETH</span><span class="snowball-step-italic">0.0156ETH/item</span></section>
-                <section class="snowball-step-content">
-                  <div class="snowball-step-table">
-                      <i></i>
-                      <p>Outreach to BTC whale holders to further increase our exposure.</p>
-                      <p>Our community then will be strong and large enough to have a solid online presence, and we will</p>
-                      <p>gain more attention by interacting and inviting them to our community. Hopefully, the idea of ​​code</p>
-                      <p>freedom as well as NFT freedom will become more dominant because of our efforts!</p>
-                  </div>
-                  <div class="snowball-step-table">
-                    <i></i>
-                    <p>More whitelist spots open.</p>
-                  </div>
-                </section>
-              </section>
-              <section class="snowball-step dark-red" style="margin-bottom:64px;">
-                <section class="snowball-step-title">128K<span class="snowball-step-members">members</span><span class="snowball-step-free">FREE MINT！</span></section>
-                <section class="snowball-step-content">
-                  <div class="snowball-step-table">
-                      <i></i>
-                      <p>#Elon! Join us!#</p>
-                      <p>Our effort to reach out to arguably the most influential figure in the crypto. </p>
-                      <p>A community of more than 128k people will call for Elon Musk’s attention.</p>
-                  </div>
-                  <div class="snowball-step-table"><i></i><span>Opening the FREE MINT!</span></div>
-                  <div class="snowball-step-table">
-                    <i></i>
-                    <p>More whitelist spots open.</p>
-                  </div>
-                </section>
-              </section>
+
               <section class="snowball-next">
                   <section class="snowball-next-title">Later planning</section>
                   <section class="snowball-next-subtitle">Propose further plans based on the DAO governance, including but not limited to:</section>
-                  <section class="snowball-next-content"><img src="~@/assets/images/svg/star.svg" alt="DCrush Labs" width="16">Move forward with the donations to global code developers and other related organizations.</section>
-                  <section class="snowball-next-content"><img src="~@/assets/images/svg/star.svg" alt="DCrush Labs" width="16">Issue code avatars that are AI-generated. </section>
+                <section class="snowball-next-content"><img src="~@/assets/images/svg/star.svg" alt="DCrush Labs" width="16">Fair distribution of Royalty income, 10% of which will be donated to Bitocin.org,</section>
+                <section class="snowball-next-content" style="padding-left: 32px">25% will be airdropped to holders, and the remaining 65% will be used as a foundation</section>
+                <section class="snowball-next-content" style="padding-left: 32px">to support the community.</section>
+                  <section class="snowball-next-content"><img src="~@/assets/images/svg/star.svg" alt="DCrush Labs" width="16">Consider issuing code avatars that are AI-generated. </section>
                   <section class="snowball-next-content"><img src="~@/assets/images/svg/star.svg" alt="DCrush Labs" width="16">Send out invitations to developers to join in Code Metaverse. </section>
                   <section class="snowball-next-content"><img src="~@/assets/images/svg/star.svg" alt="DCrush Labs" width="16">And more information on SocialFi products will be available.</section>
               </section>
@@ -330,28 +380,32 @@
                       <div v-html="el" class="faq-content"  v-for="el in item.content" :key="el"></div>
                   </div>
                 </section>
-                <section class="faq-title faq-address">Smart Contract</section>
-                <section class="faq-address-container">
-                  <section class="faq-address-content">
-                    <section class="faq-address-title">
-                      <p>Address</p>
-                      <p>ERC721</p>
-                    </section>
-                    <!--production  -->
-                    <section class="faq-address-detail">{{contract}}</section>
-                    <!-- <img src="~@/assets/images/addressMask.png" alt="DCrush Labs" width="327"> -->
+                <section class="faq-title faq-address">Community</section>
+<!--                <section class="faq-address-container">-->
+<!--                  <section class="faq-address-content">-->
+<!--                    <section class="faq-address-title">-->
+<!--                      <p>Address</p>-->
+<!--                      <p>ERC721</p>-->
+<!--                    </section>-->
+<!--                    &lt;!&ndash;production  &ndash;&gt;-->
+<!--                    <section class="faq-address-detail">{{contract}}</section>-->
+<!--                    &lt;!&ndash; <img src="~@/assets/images/addressMask.png" alt="DCrush Labs" width="327"> &ndash;&gt;-->
+<!--                  </section>-->
+<!--                </section>-->
+              <section class="faq-address-container">
+                <section class="faq-address-content">
+                  <section class="faq-links">
+                    <ul class="clearfix">
+                      <li class="nft-left" @click="toDiscord"><img src="~@/assets/images/svg/discord-s.svg" alt="DCrush Labs"></li>
+                      <li class="nft-left" @click="toTwitter"><img src="~@/assets/images/svg/twitter-s.svg" alt="DCrush Labs"></li>
+                      <li class="nft-right" @click="toOpenSea" style="margin:0px"><img src="~@/assets/images/svg/opensea-s.svg" alt="DCrush Labs"></li>
+                    </ul>
                   </section>
                 </section>
-                <section class="faq-links">
-                  <ul class="clearfix">
-                    <li class="nft-left" @click="toDiscord"><img src="~@/assets/images/svg/discord-s.svg" alt="DCrush Labs"></li>
-                    <li class="nft-left" @click="toTwitter"><img src="~@/assets/images/svg/twitter-s.svg" alt="DCrush Labs"></li>
-                    <li class="nft-right" @click="toOpenSea" style="margin:0px"><img src="~@/assets/images/svg/opensea-s.svg" alt="DCrush Labs"></li>
-                  </ul>
-                </section>
+              </section>
             </section>
-        </section>        
-        <!-- About -->        
+        </section>
+        <!-- About -->
         <section class="about-part">
           <section class="wrapper">
               <section class="about-content">
@@ -370,7 +424,7 @@
               </section>
           </section>
         </section>
-    </section>    
+    </section>
     <!-- connect -->
     <section class="mask" v-show="showConnect">
       <section class="connect-container" >
@@ -381,14 +435,14 @@
           <div class="connect-wallet-container">
               <div class="connect-wallet-content">
                   <section class="connect-wallet" @click="connectWallect">
-                    <img src="~@/assets/images/svg/matemask.svg" alt="DCrush Labs" width="36" style="margin-left:24px;margin-right:12px;">MetaMask 
+                    <img src="~@/assets/images/svg/matemask.svg" alt="DCrush Labs" width="36" style="margin-left:24px;margin-right:12px;">MetaMask
                     <section class="connect-loading" v-if="connecting">
-                        <img src="~@/assets/images/svg/upload-icon.svg" alt="DCrush Labs" width="30" style="text-align:center"> 
-                    </section>           
+                        <img src="~@/assets/images/svg/upload-icon.svg" alt="DCrush Labs" width="30" style="text-align:center">
+                    </section>
                 </section>
               </div>
           </div>
-          
+
       </section>
     </section>
     <!-- uninstall -->
@@ -400,13 +454,13 @@
           </section>
           <a class="uninstall-btn" href="https://metamask.io/download.html">Download</a>
       </section>
-    </section> 
+    </section>
     <!-- img click -->
     <section class="mask" v-show="isEnlarge">
       <section class="img-enlarge" id="enlargeImg" >
           <img :src="imgSrc" alt="DCrush Labs" class="enlargeImg">
       </section>
-    </section>   
+    </section>
     <!-- toast -->
     <section class="mask" v-show="isCopy">
       <section class="copy-container"  >
@@ -492,27 +546,27 @@ export default {
           "Satoshi Nakamoto and 358 signatures of core Bitcoin contributors cited by Bitcoin.org."
           ]
         },
-        {
-          spread:false,
-          title:'How do I obtain Bitcoin Code NFT?',
-          content:["Participate in the NSO and you will get a chance at getting a Bitcoin Code NFT for free. ","Whitelisted members will get minting priority.","For detailed information, follow our community updates."]
-        },
-        {
-          spread:false,
-          title:'What is a NFT Snowball Offering (NSO)?',
-          content:["A NFT Snowball offering (NSO) is a revolutionary NFT issue experiment driven completely by community.","After the issuance cycle begins, the minting price will decreases as the community member grows. And eventually reaches Free Mint when the community is at a large enough size."]
-        },
+        // {
+        //   spread:false,
+        //   title:'How do I obtain Bitcoin Code NFT?',
+        //   content:["Participate in the NSO and you will get a chance at getting a Bitcoin Code NFT for free. ","Whitelisted members will get minting priority.","For detailed information, follow our community updates."]
+        // },
+        // {
+        //   spread:false,
+        //   title:'What is a NFT Snowball Offering (NSO)?',
+        //   content:["A NFT Snowball offering (NSO) is a revolutionary NFT issue experiment driven completely by community.","After the issuance cycle begins, the minting price will decreases as the community member grows. And eventually reaches Free Mint when the community is at a large enough size."]
+        // },
         {
           spread:false,
           title:'How is this project unique from others?',
           content:["This collection is generated by the Bitcoin code, and each row is unique.","It is an experimental project originating from the community and giving back to the community, everyone can participate and enjoy the Free Mint! ","This experiment aims to remind people of the freedom that code gives us."]
-        },
-        {
-          spread:false,
-          title:'Does Bitcoin Code NFT involve copyright infringement?',
-          content: ["It does not. Bitcoin is an open-source project under the MIT license. ","The MIT license allows anyone who obtains a copy of the software to deal in the software without restriction, and free of charge.","Thereupon we have added a copyright notice and permission notice to the last two of this collection."]
         }
-        
+        // {
+        //   spread:false,
+        //   title:'Does Bitcoin Code NFT involve copyright infringement?',
+        //   content: ["It does not. Bitcoin is an open-source project under the MIT license. ","The MIT license allows anyone who obtains a copy of the software to deal in the software without restriction, and free of charge.","Thereupon we have added a copyright notice and permission notice to the last two of this collection."]
+        // }
+
       ]
     }
   },
@@ -568,7 +622,7 @@ export default {
       },3000)
     },
     enlargeImg(data){
-      this.imgSrc = data.url;      
+      this.imgSrc = data.url;
       let shadow = "0px 0px 30px 0 "+data.color;
       // console.log(data);
       $("#enlargeImg").css({
@@ -580,7 +634,7 @@ export default {
       this.wallet = "";
       this.balance = ""
       this.isAccount = false;
-    },    
+    },
     mint(){ //FIXME called, after get address or address changed
       let me = this;
       if(me.wallet){// have connect
@@ -597,7 +651,7 @@ export default {
           console.log(maxMintNum);
           if( maxMintNum <=1 ) maxMintNum = 1;
           // if( maxMintNum > 10 ) maxMintNum = 10;
-          // FIXME 
+          // FIXME
           // show mint dialog accrossing maxMintNum
           let mintOptions = [];
           for(let i = 1;i<=maxMintNum;i++){
@@ -657,7 +711,7 @@ export default {
               me.isMinting = false;
               me.initMaxMint();
             })
-            .on('confirmation', function(confirmationNumber, receipt){ 
+            .on('confirmation', function(confirmationNumber, receipt){
               console.log("confirmationNumber, receipt" + confirmationNumber + receipt);
             })
             .on('error', function(errObj) {
@@ -729,7 +783,7 @@ export default {
     },
     isMetaMaskInstalled(){
       //haveInstall dapp
-      
+
       return Boolean(ethereum && ethereum.isMetaMask);
     },
     MetaMaskClientCheck(){
@@ -765,13 +819,13 @@ export default {
         // console.log(weiBalance);
         let balance = this.Web3.utils.fromWei(weiBalance,"ether");
         // console.log(Number(balance).toFixed(3));
-        this.balance = Number(balance).toFixed(3);     
+        this.balance = Number(balance).toFixed(3);
         this.isAccount = true;
       }else{
         this.showConnect = true;
       }
-      
-      
+
+
     },
     toSelect(){
       this.selecting = !this.selecting;
@@ -805,7 +859,7 @@ export default {
       window.open("https://twitter.com/BTCcodeNFT")
     },
     toDiscord(){
-      window.open("https://discord.gg/WnbsRmbH")
+      window.open("https://discord.gg/xws6hmUR6k")
     },
     toOpenSea(){
       window.open("https://opensea.io/collection/bitcoin-code-nft")
@@ -818,7 +872,7 @@ export default {
         // console.log(res);
         this.imgGrid = res.data.data;
       })
-      
+
     },
   },
   mounted(){
@@ -850,13 +904,13 @@ export default {
         me.activeId = "faq";
       }
     })
-    this.initImgGrid() 
+    this.initImgGrid()
     $(".mask").click(function(e){
       let e_class = e.target.className;
       if (e_class !== 'enlargeImg'&&me.isEnlarge){
           me.isEnlarge = false;
       }
-    })      
+    })
     //close enlarge
     $(document).ready(function () {
       if(!me.comming){
@@ -874,12 +928,12 @@ export default {
             me.showNetTip = false;
           }
           if(ethereum.selectedAddress){
-            me.wallet = ethereum.selectedAddress;            
+            me.wallet = ethereum.selectedAddress;
             Axios.defaults.headers.common['address'] = ethereum.selectedAddress;
             me.isCanMint()
           }
         },500)
-        
+
         ethereum.on('accountsChanged', accounts => {
           // console.log(accounts)
           me.wallet = accounts[0];
@@ -901,7 +955,7 @@ export default {
         })
         console.log(me.showNetTip);
       }
-        
+
         $(document).click(function(e){
           // console.log(e);
           let e_class = e.target.className;
@@ -911,7 +965,7 @@ export default {
           }
         })
     });
-    
+
   }
 }
 </script>

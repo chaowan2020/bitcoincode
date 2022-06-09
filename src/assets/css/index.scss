@@ -530,8 +530,8 @@ header{
             }
             .snowball-step-snowball{
                 position: absolute;
-                right: -4px;
-                top:45px;
+                right: -40px;
+                top: -50px;
             }
             &.dark-blue{
                 background-color: #004FB8;
@@ -556,18 +556,63 @@ header{
             }
             &.dark-green{
                 background-color: #8F0057;
+                &.disabled{
+                    background-color: #ffcccc;
+                    text-decoration: line-through #fff;
+                    text-decoration: line-through #fff 3px;
+                    .snowball-step-italic{
+                        text-decoration: line-through #fff;
+                        text-decoration: line-through #fff 3px;
+                    }
+                }
             }
             &.brown{
                 background-color: #DB6D00;
+                &.disabled{
+                    background-color: #ffbf80;
+                    text-decoration: line-through #fff;
+                    text-decoration: line-through #fff 3px;
+                    .snowball-step-italic{
+                        text-decoration: line-through #fff;
+                        text-decoration: line-through #fff 3px;
+                    }
+                }
             }
             &.light-blue{
                 background-color: #C08500;
+                &.disabled{
+                    background-color: #ffe8b3;
+                    text-decoration: line-through #fff;
+                    text-decoration: line-through #fff 3px;
+                    .snowball-step-italic{
+                        text-decoration: line-through #fff;
+                        text-decoration: line-through #fff 3px;
+                    }
+                }
             }
             &.light-red{
                 background-color: #72A200;
+                &.disabled{
+                    background-color: #e0ff99;
+                    text-decoration: line-through #fff;
+                    text-decoration: line-through #fff 3px;
+                    .snowball-step-italic{
+                        text-decoration: line-through #fff;
+                        text-decoration: line-through #fff 3px;
+                    }
+                }
             }
             &.light-brown{
                 background-color: #008D68;
+                &.disabled{
+                    background-color: #99ffe4;
+                    text-decoration: line-through #fff;
+                    text-decoration: line-through #fff 3px;
+                    .snowball-step-italic{
+                        text-decoration: line-through #fff;
+                        text-decoration: line-through #fff 3px;
+                    }
+                }
             }
             &.light-green{
                 background-color: #00BBBD;
@@ -575,11 +620,21 @@ header{
             &.dark-red{
                 background-color: #5C00C0;
             }
-            
+            &.blue-medium{
+                background-color: #1696B4;
+            }
+            &.purple-medium{
+                background-color: #5C00C0;
+            }
+            &.green-medium{
+                background-color: #228A10;
+            }
+
             .snowball-step-title{
                 font-size: 22px;
                 line-height: 60px;
-                font-weight: 700;
+                font-weight: 800;
+                font-family: 'Jost', sans-serif;
                 margin-bottom: 10px;
                 .snowball-step-italic{
                     font-weight: 400;
@@ -639,6 +694,29 @@ header{
                         -webkit-text-fill-color: transparent;
                     }
                 }
+                .total-supply{
+                    position: relative;
+                    margin-bottom: 18px;
+                    i{
+                        position: absolute;
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        top: 4px;
+                        left: -30px;
+                        background:url("~@/assets/images/svg/star.svg") no-repeat;
+                    }
+                    span{
+                        font-weight: 800;
+                        font-family: 'Jost', sans-serif;
+                        display: inline-block;
+                        background: linear-gradient(122deg, #FFFFFF 0%, #87B8F6 31%, #CE8B8B 62%, #9EE32A 100%);
+                        background-clip: text;
+                        color: #FF0000;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
             }
         }
     }
@@ -693,6 +771,25 @@ header{
             line-height: 30px;  
             font-weight: 400;          
         }
+        .community-three{
+            width: 528px;
+            height: 166px;
+            margin-left: 280px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 1px solid;
+            padding: 2px;
+            border-image: linear-gradient(133deg, rgba(255, 126, 126, 1), rgba(95, 255, 117, 1), rgba(255, 104, 221, 1)) 1 1;
+            .faq-address-content{
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                background-color: #0b113d;
+                border-radius: 14px;
+                padding: 25px 56px;
+
+            }
+        }
         .faq-address-container{
             width: 528px;
             height: 166px;
@@ -713,7 +810,12 @@ header{
         }
         .faq-links{
             width: 422px;
-            margin:90px auto 0px auto;
+            margin:30px auto 0px auto;
+            background-color: #0b113d;
+            //width: 100%;
+            //height: 100%;
+            box-sizing: border-box;
+            border-color: linear-gradient(133deg, rgba(255, 126, 126, 1), rgba(95, 255, 117, 1), rgba(255, 104, 221, 1));
             ul{
                 li{
                     cursor: pointer;
