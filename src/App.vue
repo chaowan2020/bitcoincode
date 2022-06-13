@@ -11,25 +11,25 @@
         </section>
         <ul class="nft-right clearfix">
             <!-- <li><img src="~@/assets/images/wallet.png" alt="DCrush Labs"></li> -->
-            <li  class="wallet-li">
-              <img src="~@/assets/images/svg/Wallet-little.svg" class="wallet-img" alt="DCrush Labs" @click="showWallet">
-              <section class="wallet-container" v-show="isAccount">
-                <section class="wallet-balance">ETH: {{balance}}</section>
-                <section class="wallet-nft" @click="toOSAccount">
-                  My NFTs
-                </section>
-                <section class="wallet-address-title">wallet address</section>
-                <section class="wallet-address-container">
-                    <section class="wallet-address">
-                      {{wallet.substring(0,12)+"****"+wallet.substr(-12)}}<img src="~@/assets/images/svg/copy-icon.svg" @click="copy" class="wallet-copy" alt="DCrush Labs" width="18" style="margin-left:20px">
-                  </section>
-                </section>
-                <section class="wallet-btns clearfix">
-                    <section class="wallet-btn" @click="toEthExplorer">View on Explorer</section>
-                    <!-- <section class="wallet-btn" @click="disconnect">Disconnect</section> -->
-                </section>
-              </section>
-            </li>
+<!--            <li  class="wallet-li">-->
+<!--              <img src="~@/assets/images/svg/Wallet-little.svg" class="wallet-img" alt="DCrush Labs" @click="showWallet">-->
+<!--              <section class="wallet-container" v-show="isAccount">-->
+<!--                <section class="wallet-balance">SOL: {{balance}}</section>-->
+<!--                <section class="wallet-nft" @click="toOSAccount">-->
+<!--                  My NFTs-->
+<!--                </section>-->
+<!--                <section class="wallet-address-title">phantom address</section>-->
+<!--                <section class="wallet-address-container">-->
+<!--                    <section class="wallet-address">-->
+<!--                      {{wallet.substring(0,12)+"****"+wallet.substr(-12)}}<img src="~@/assets/images/svg/copy-icon.svg" @click="copy" class="wallet-copy" alt="DCrush Labs" width="18" style="margin-left:20px">-->
+<!--                  </section>-->
+<!--                </section>-->
+<!--                <section class="wallet-btns clearfix">-->
+<!--                    <section class="wallet-btn" @click="toEthExplorer">View on Explorer</section>-->
+<!--                    &lt;!&ndash; <section class="wallet-btn" @click="disconnect">Disconnect</section> &ndash;&gt;-->
+<!--                </section>-->
+<!--              </section>-->
+<!--            </li>-->
             <!-- <li @click="toOpenSea"><img src="~@/assets/images/opensea.png" alt="DCrush Labs"></li> -->
             <li @click="toTwitter"><img src="~@/assets/images/svg/Twitter-little.svg" alt="DCrush Labs"></li>
             <li style="margin-left:154px" @click="toDiscord"><img src="~@/assets/images/svg/Discord-little.svg" alt="DCrush Labs"></li>
@@ -53,28 +53,28 @@
     <section class="content-container">
         <!-- links -->
         <section class="wrapper" id="links">
-          <section class="link-part clearfix">
+          <section class="link-part clearfix" style="padding-left: 123px;">
             <div class="link-img nft-left" @click="toDiscord"><img src="~@/assets/images/svg/Discord-big.svg" alt="DCrush Labs" ></div>
             <div class="link-img nft-left" @click="toTwitter"><img src="~@/assets/images/svg/Twitter-big.svg" alt="DCrush Labs" ></div>
-            <div class="nft-right link-wallet" >
-              <img src="~@/assets/images/svg/Wallet-big.svg" class="wallet-img" alt="DCrush Labs" @click="showWallet">
-              <section class="wallet-container" v-show="isAccount">
-                <section class="wallet-balance">ETH: {{balance}}</section>
-                <section class="wallet-nft" @click="toOSAccount">
-                  My NFTs
-                </section>
-                <section class="wallet-address-title">wallet address</section>
-                <section class="wallet-address-container">
-                    <section class="wallet-address">
-                      {{wallet.substring(0,12)+"****"+wallet.substr(-12)}}<img src="~@/assets/images/svg/copy-icon.svg" @click="copy" class="wallet-copy" alt="DCrush Labs" width="18" style="margin-left:20px">
-                  </section>
-                </section>
-                <section class="wallet-btns clearfix">
-                    <section class="wallet-btn" @click="toEthExplorer">View on Explorer</section>
-                    <!-- <section class="wallet-btn" @click="disconnect">Disconnect</section> -->
-                </section>
-              </section>
-            </div>
+<!--            <div class="nft-right link-wallet" >-->
+<!--              <img src="~@/assets/images/svg/Wallet-big.svg" class="wallet-img" alt="DCrush Labs" @click="showWallet">-->
+<!--              <section class="wallet-container" v-show="isAccount">-->
+<!--                <section class="wallet-balance">SOL: {{balance}}</section>-->
+<!--                <section class="wallet-nft" @click="toOSAccount">-->
+<!--                  My NFTs-->
+<!--                </section>-->
+<!--                <section class="wallet-address-title">phantom address</section>-->
+<!--                <section class="wallet-address-container">-->
+<!--                    <section class="wallet-address">-->
+<!--                      {{wallet.substring(0,12)+"****"+wallet.substr(-12)}}<img src="~@/assets/images/svg/copy-icon.svg" @click="copy" class="wallet-copy" alt="DCrush Labs" width="18" style="margin-left:20px">-->
+<!--                  </section>-->
+<!--                </section>-->
+<!--                <section class="wallet-btns clearfix">-->
+<!--                    <section class="wallet-btn" @click="toEthExplorer">View on Explorer</section>-->
+<!--                    &lt;!&ndash; <section class="wallet-btn" @click="disconnect">Disconnect</section> &ndash;&gt;-->
+<!--                </section>-->
+<!--              </section>-->
+<!--            </div>-->
           </section>
         </section>
         <!-- nfts -->
@@ -130,9 +130,11 @@
                         </div>
                       </div>
                   </div>
-                  <img src="~@/assets/images/svg/Coming.svg" v-if="mintCode=='comingsoon'" class="mint-btn" alt="DCrush Labs">
-                  <img src="~@/assets/images/svg/soldOut.svg" v-if="mintCode=='soldout'" class="mint-btn" alt="DCrush Labs">
-                  <img src="~@/assets/images/svg/Mint.svg" v-if="mintCode=='mint'" class="mint-btn" alt="DCrush Labs">
+                  <img src="~@/assets/images/svg/CommingSoon.svg" v-if="mintCode==='comingsoon'" class="mint-btn" alt="DCrush Labs">
+                  <img src="~@/assets/images/svg/NFTSoldOut.svg" v-if="mintCode==='soldout'" class="mint-btn" alt="DCrush Labs">
+                  <img src="~@/assets/images/svg/Mint.svg" style="cursor: pointer"
+                       @click="toMintNFTToken" v-if="mintCode==='mint'" class="mint-btn"
+                       alt="DCrush Labs">
                   <!-- <div class="mint-charge">
                     <div :class="isMinting?'mint-charge-btn disabled':'mint-charge-btn'" v-show="canmint" @click="mint">Mint</div>
                     <div class="mint-charge-btn disabled" v-show="!canmint" id="cantmint">Mint</div>
@@ -434,7 +436,7 @@
           </section>
           <div class="connect-wallet-container">
               <div class="connect-wallet-content">
-                  <section class="connect-wallet" @click="connectWallect">
+                  <section class="connect-wallet" @click="connectWallet">
                     <img src="~@/assets/images/svg/matemask.svg" alt="DCrush Labs" width="36" style="margin-left:24px;margin-right:12px;">MetaMask
                     <section class="connect-loading" v-if="connecting">
                         <img src="~@/assets/images/svg/upload-icon.svg" alt="DCrush Labs" width="30" style="text-align:center">
@@ -479,12 +481,12 @@ export default {
   data(){
     return{
       isGoOn:false,
-      mintCode:"mint",
+      mintCode:"mint", //comingsoon, soldout, mint
       netTipTop:true,
-      comming:true,
+      // comming:true,
       // production
       // netTip:`Bitcoin Code NFT is only available on Ethereum  "Rinkeby" test network.`,
-      netTip:`Bitcoin Code NFT is only available on Ethereum "mainnet" network.`,
+      netTip:`Bitcoin Code NFT is only available on Solana network.`,
       nowTip:"",
       copyText:"",
       showNetTip:false,
@@ -507,7 +509,8 @@ export default {
       activeId:"nft",
       mintValue:1,
       selecting:false,
-      mintOptions:[1],
+      mintOptions:[1, 2],
+      tokenToMint: 1,
       // roadmaps:[
       //   {
       //     per:"25%",
@@ -583,24 +586,27 @@ export default {
       this.timeFrom = h+":"+m+":"+s;
     },
     isCanMint(){
-      let me = this;
-      this.$http.get("/api/user/can_mint").then(res=>{
-        if(res.data.code=="200"){
-          // if(me.isGoOn){// clicked mint
-          //   me.minting();
-          // }
-          me.mintCode = "mint";
-        }else if(res.data.code=="Coming Soon"){
-          me.mintCode = "comingsoon";
-        }else if(res.data.code=="Sold out"){
-          me.mintCode = "soldout";
-        }
-        me.initMaxMint();
-      })
+      // let me = this;
+      // this.$http.get("/api/user/can_mint").then(res=>{
+      //   if(res.data.code=="200"){
+      //     // if(me.isGoOn){// clicked mint
+      //     //   me.minting();
+      //     // }
+      //     me.mintCode = "mint";
+      //   }else if(res.data.code=="Coming Soon"){
+      //     me.mintCode = "comingsoon";
+      //   }else if(res.data.code==="Sold out"){
+      //     me.mintCode = "soldout";
+      //   }
+      //   me.initMaxMint();
+      // })
     },
     hideNetTip(){
       this.nowTip = this.netTip;
       this.showNetTip = false;
+    },
+    toMintNFTToken(){
+      window.open(`http://localhost:4200/${this.tokenToMint}`);
     },
     copy(){
       let me = this;
@@ -777,9 +783,9 @@ export default {
       this.showConnect = false;
       this.connecting = false;
     },
-    connectWallect(){
-      this.connecting = true;
-      this.MetaMaskClientCheck()
+    connectWallet(){
+      // this.connecting = true;
+      // this.MetaMaskClientCheck()
     },
     isMetaMaskInstalled(){
       //haveInstall dapp
@@ -792,7 +798,7 @@ export default {
         this.uninstall = true;
         this.connecting = false;
       }else{
-        this.onClickConnect()
+        // this.onClickConnect()
       }
     },
     async onClickConnect(){
@@ -807,32 +813,52 @@ export default {
       // console.log( accounts[0] || 'Not able to get accounts');
     },
     async showWallet(){
-      if(!this.comming){
-        this.copyText = "Coming soon!"
-        this.isCopy = true;
-        this.copyTextClose()
-        return;
+      // if(!this.comming){
+      //   this.copyText = "Coming soon!"
+      //   this.isCopy = true;
+      //   this.copyTextClose()
+      //   return;
+      // }
+      const solWallet = localStorage.getItem('solWallet');
+      if (solWallet) {
+        console.log(solWallet);
+      } else {
+        window.open('http://localhost:4200');
       }
-      if(this.wallet){
-        // query balance
-        let weiBalance = await this.Web3.eth.getBalance(this.wallet)
-        // console.log(weiBalance);
-        let balance = this.Web3.utils.fromWei(weiBalance,"ether");
-        // console.log(Number(balance).toFixed(3));
-        this.balance = Number(balance).toFixed(3);
-        this.isAccount = true;
-      }else{
-        this.showConnect = true;
-      }
+      // if(this.wallet){
+      //   // query balance
+      //   let weiBalance = await this.Web3.eth.getBalance(this.wallet)
+      //   // console.log(weiBalance);
+      //   let balance = this.Web3.utils.fromWei(weiBalance,"ether");
+      //   // console.log(Number(balance).toFixed(3));
+      //   this.balance = Number(balance).toFixed(3);
+      //   this.isAccount = true;
+      // }else{
+      //   // this.showConnect = true;
+      //   window.open('http://localhost:3000')
+      // }
 
 
     },
     toSelect(){
       this.selecting = !this.selecting;
     },
+    checkIsReadyToMint(){
+      const testOne = new Date('2022-06-13 23:00:00 GMT+08:00');
+      const testTwo = new Date('2022-06-14 24:00:00 GMT+08:00')
+      const startOne = new Date('2022-06-15 14:00:00 GMT+08:00');
+      const endOne = new Date('2022-06-16 14:00:00.0 GMT+08:00');
+      const startTwo = new Date('2022-06-20 14:00:00 GMT+08:00');
+      const endTwo = new Date('2022-06-21 14:00:00 GMT+08:00');
+      const startThree = new Date('2022-06-23 14:00:00 GMT+08:00');
+      const endThree = new Date('2022-06-24 14:00:00 GMT+08:00');
+      const now = new Date();
+      return (now > testOne && now < testTwo) || (now > startOne && now < endOne) || (now > startTwo && now < endTwo) || (now > startThree && now < endThree);
+    },
     choose(data){
       this.mintValue = data;
-      this.removeSelect()
+      this.removeSelect();
+      this.tokenToMint = data;
     },
     removeSelect(){
       this.selecting = false;
@@ -875,6 +901,10 @@ export default {
 
     },
   },
+  beforeMount() {
+    let me = this;
+    me.mintCode = me.checkIsReadyToMint() ? 'mint' : 'comingsoon';
+  },
   mounted(){
     this.nowTip = this.netTip;
     let me = this;
@@ -913,10 +943,10 @@ export default {
     })
     //close enlarge
     $(document).ready(function () {
-      if(!me.comming){
-        me.mintCode='comingsoon';
-        return
-      }
+      // if(!me.comming){
+      //   me.mintCode='comingsoon';
+      //   return
+      // }
       if(ethereum){
         setTimeout(()=>{
           // console.log(ethereum.chainId);
