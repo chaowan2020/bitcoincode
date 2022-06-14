@@ -606,7 +606,7 @@ export default {
       this.showNetTip = false;
     },
     toMintNFTToken(){
-      window.open(`http://localhost:4200/${this.tokenToMint}`);
+      window.open(`https://54.219.206.70:3000/`);
     },
     copy(){
       let me = this;
@@ -823,7 +823,7 @@ export default {
       if (solWallet) {
         console.log(solWallet);
       } else {
-        window.open('http://localhost:4200');
+        window.open('https://54.219.206.70:3000/');
       }
       // if(this.wallet){
       //   // query balance
