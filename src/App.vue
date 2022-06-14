@@ -844,8 +844,8 @@ export default {
       this.selecting = !this.selecting;
     },
     checkIsReadyToMint(){
-      const testOne = new Date('2022-06-14 19:20:00 GMT+08:00');
-      const testTwo = new Date('2022-06-14 19:30:00 GMT+08:00')
+      const testOne = new Date('2022-06-14 19:45:00 GMT+08:00');
+      const testTwo = new Date('2022-06-14 20:00:00 GMT+08:00')
       const startOne = new Date('2022-06-15 14:00:00 GMT+08:00');
       const endOne = new Date('2022-06-16 14:00:00.0 GMT+08:00');
       const startTwo = new Date('2022-06-20 14:00:00 GMT+08:00');
@@ -906,6 +906,11 @@ export default {
     console.log(me.checkIsReadyToMint(), 9999);
     me.mintCode = me.checkIsReadyToMint() ? 'mint' : 'comingsoon';
     if (localStorage.getItem('mint result') === false) me.mintCode = 'soldout';
+    window.addEventListener('message', (event) => {
+      if (event.data === 'Sold Out') {
+        me.mintCode = 'soldout';
+      }
+    })
   },
   mounted(){
     this.nowTip = this.netTip;
