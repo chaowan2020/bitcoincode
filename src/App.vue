@@ -844,16 +844,17 @@ export default {
       this.selecting = !this.selecting;
     },
     checkIsReadyToMint(){
-      const testOne = new Date('2022-06-14 19:45:00 GMT+08:00');
-      const testTwo = new Date('2022-06-14 20:00:00 GMT+08:00')
-      const startOne = new Date('2022-06-15 14:00:00 GMT+08:00');
-      const endOne = new Date('2022-06-16 14:00:00.0 GMT+08:00');
-      const startTwo = new Date('2022-06-20 14:00:00 GMT+08:00');
-      const endTwo = new Date('2022-06-21 14:00:00 GMT+08:00');
-      const startThree = new Date('2022-06-23 14:00:00 GMT+08:00');
-      const endThree = new Date('2022-06-24 14:00:00 GMT+08:00');
+      const testOne = new Date('2022-06-15 17:35:00 GMT+08:00');
+      const testTwo = new Date('2022-06-15 17:50:00 GMT+08:00')
+      // const startOne = new Date('2022-06-15 14:00:00 GMT+08:00');
+      // const endOne = new Date('2022-06-16 14:00:00.0 GMT+08:00');
+      // const startTwo = new Date('2022-06-20 14:00:00 GMT+08:00');
+      // const endTwo = new Date('2022-06-21 14:00:00 GMT+08:00');
+      // const startThree = new Date('2022-06-23 14:00:00 GMT+08:00');
+      // const endThree = new Date('2022-06-24 14:00:00 GMT+08:00');
       const now = new Date();
-      return (now > testOne && now < testTwo) || (now > startOne && now < endOne) || (now > startTwo && now < endTwo) || (now > startThree && now < endThree);
+      // return (now > testOne && now < testTwo) || (now > startOne && now < endOne) || (now > startTwo && now < endTwo) || (now > startThree && now < endThree);
+      return (now > testOne && now < testTwo);
     },
     choose(data){
       this.mintValue = data;
@@ -907,6 +908,7 @@ export default {
     me.mintCode = me.checkIsReadyToMint() ? 'mint' : 'comingsoon';
     if (localStorage.getItem('mint result') === false) me.mintCode = 'soldout';
     window.addEventListener('message', (event) => {
+      if (event.origin !== "https://54.219.206.70:3000/") return;
       if (event.data === 'Sold Out') {
         me.mintCode = 'soldout';
       }
